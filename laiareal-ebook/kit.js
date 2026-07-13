@@ -107,6 +107,52 @@
       document.querySelectorAll("[data-gross-value]").forEach((element) => { element.textContent = currency.format(gross); });
       document.querySelectorAll("[data-net-value]").forEach((element) => { element.textContent = currency.format(net); });
     }
+    if (form.dataset.workbook === "consultor") {
+      for (let row = 1; row <= 8; row += 1) {
+        const impact = number(form.elements[`opp_${row}_impact`]?.value);
+        const feasibility = number(form.elements[`opp_${row}_feasibility`]?.value);
+        const context = number(form.elements[`opp_${row}_context`]?.value);
+        const adoption = number(form.elements[`opp_${row}_adoption`]?.value);
+        const risk = number(form.elements[`opp_${row}_risk`]?.value);
+        const score = impact * 0.30 + feasibility * 0.20 + context * 0.20 + adoption * 0.15 + (risk ? 6 - risk : 0) * 0.15;
+        document.querySelectorAll(`[data-consult-score="${row}"]`).forEach((element) => {
+          element.textContent = score ? score.toFixed(2) : "—";
+        });
+      }
+
+      const maturityFields = ["identity", "knowledge", "process", "permissions", "learning"];
+      const maturityValues = maturityFields.map((item) => number(form.elements[`maturity_${item}`]?.value)).filter((value) => value >= 0);
+      const maturityAverage = maturityValues.length ? maturityValues.reduce((sum, value) => sum + value, 0) / maturityValues.length : 0;
+      const maturityBand = maturityAverage < 1 ? "Implícito" : maturityAverage < 2 ? "Documentado" : maturityAverage < 3 ? "Gobernado" : maturityAverage < 4 ? "Medible" : "Adaptativo";
+      document.querySelectorAll("[data-maturity-average]").forEach((element) => { element.textContent = maturityAverage.toFixed(1); });
+      document.querySelectorAll("[data-maturity-band]").forEach((element) => { element.textContent = maturityBand; });
+
+      for (let row = 1; row <= 8; row += 1) {
+        const riskScore = number(form.elements[`risk_${row}_likelihood`]?.value) * number(form.elements[`risk_${row}_impact`]?.value);
+        document.querySelectorAll(`[data-risk-score="${row}"]`).forEach((element) => {
+          element.textContent = riskScore || "—";
+          element.dataset.level = riskScore >= 16 ? "critical" : riskScore >= 10 ? "high" : riskScore >= 5 ? "medium" : riskScore ? "low" : "empty";
+        });
+      }
+
+      const volume = number(form.elements.consult_volume?.value);
+      const savedMinutes = Math.max(0, number(form.elements.consult_before_minutes?.value) - number(form.elements.consult_after_minutes?.value));
+      const adoption = Math.min(100, Math.max(0, number(form.elements.consult_adoption?.value))) / 100;
+      const timeValue = volume * savedMinutes / 60 * number(form.elements.consult_hour_cost?.value) * adoption;
+      const avoidedErrors = Math.max(0, number(form.elements.consult_error_before?.value) - number(form.elements.consult_error_after?.value));
+      const grossMonthly = timeValue + avoidedErrors;
+      const netMonthly = grossMonthly - number(form.elements.consult_recurring_cost?.value);
+      const implementation = number(form.elements.consult_implementation_cost?.value);
+      const horizon = Math.max(1, number(form.elements.consult_horizon?.value) || 12);
+      const horizonValue = netMonthly * horizon - implementation;
+      const payback = netMonthly > 0 ? implementation / netMonthly : 0;
+      const roi = implementation > 0 ? horizonValue / implementation : 0;
+      document.querySelectorAll("[data-consult-gross]").forEach((element) => { element.textContent = currency.format(grossMonthly); });
+      document.querySelectorAll("[data-consult-net]").forEach((element) => { element.textContent = currency.format(netMonthly); });
+      document.querySelectorAll("[data-consult-horizon-value]").forEach((element) => { element.textContent = currency.format(horizonValue); });
+      document.querySelectorAll("[data-consult-payback]").forEach((element) => { element.textContent = payback ? `${payback.toFixed(1)} meses` : "No recuperado"; });
+      document.querySelectorAll("[data-consult-roi]").forEach((element) => { element.textContent = implementation > 0 ? `${(roi * 100).toFixed(0)}%` : "—"; });
+    }
   }
 
   function record() {
