@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Cuatro puertas en 90 días — Kit La IA Real</title>
+  <meta name="description" content="Artefacto editable para dirigir un piloto de IA por evidencia y decidir si debe escalarse, limitarse, rediseñarse o retirarse.">
+  <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="kit.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="utility-header kit-utility-header no-print">
+    <div class="container">
+      <a class="brand" href="kit-ia-real.html">
+        <img src="assets/brand-mark.svg" alt="" width="44" height="44">
+        <span>LA IA REAL</span>
+      </a>
+      <div class="kit-header-actions">
+        <a class="button button-quiet" href="kit-ia-real.html">Centro del kit</a>
+        <button class="button button-small" type="button" data-action="print">Imprimir / PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="workbook-main" id="contenido">
+    <div class="container">
+      <section class="workbook-hero">
+        <p class="eyebrow">Artefacto 03 · Plan de 90 días</p>
+        <h1>Cuatro puertas de decisión.</h1>
+        <p class="kit-lead">El plan no avanza por calendario, sino por evidencia. Cada puerta debe registrar entregables, métricas, riesgos, decisión, responsable y condiciones para el siguiente tramo.</p>
+        <div class="evidence-callout">
+          <h3>No existe una quinta opción</h3>
+          <p>Al día 90 las opciones son escalar, mantener limitado, rediseñar o retirar. “Seguir probando” sin una hipótesis nueva no es una decisión.</p>
+        </div>
+      </section>
+
+      <div class="workbook-toolbar no-print">
+        <div class="workbook-toolbar-row">
+          <div>
+            <strong>Progreso esencial: <span data-progress-value>0%</span></strong>
+            <div class="save-status" data-save-status>Los cambios se guardan en este navegador</div>
+          </div>
+          <div class="workbook-actions">
+            <button class="button button-quiet" type="button" data-action="save">Guardar</button>
+            <button class="button button-quiet" type="button" data-action="export">Exportar datos</button>
+            <button class="button button-quiet" type="button" data-action="import">Importar</button>
+            <button class="button button-danger" type="button" data-action="clear">Vaciar</button>
+          </div>
+        </div>
+        <div class="progress-track"><div class="progress-fill" data-progress-bar></div></div>
+        <input class="import-file" type="file" accept="application/json" data-import-file aria-label="Importar plan de 90 días">
+      </div>
+
+      <figure class="workbook-diagram">
+        <img src="assets/puertas-90-dias.png" alt="Cuatro puertas del piloto: problema demostrado en el día 15, método seguro en el 30, valor observado en el 60 y decisión de escala en el 90" width="1600" height="700">
+        <figcaption>Las puertas reducen incertidumbre y obligan a decidir con evidencia acumulada.</figcaption>
+      </figure>
+
+      <form data-workbook="plan90" data-title="Cuatro puertas en 90 días" novalidate>
+        <section class="workbook-section print-page" aria-labelledby="plan-mandato">
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">00</span>
+            <div><h2 id="plan-mandato">Mandato y calendario</h2><p>Un piloto tiene propietario, usuarios reales, recursos y fechas de decisión. No es una demo abierta sin final.</p></div>
+          </div>
+          <div class="input-grid input-grid-3">
+            <div class="control control-wide">
+              <label for="plan_name">Nombre del piloto <span class="required-mark">*</span></label>
+              <input id="plan_name" name="plan_name" type="text" data-required autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="plan_owner">Propietario del resultado <span class="required-mark">*</span></label>
+              <p class="control-hint">Responde de la métrica de negocio.</p>
+              <input id="plan_owner" name="plan_owner" type="text" data-required autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="plan_context_owner">Propietario del contexto <span class="required-mark">*</span></label>
+              <p class="control-hint">Mantiene fuentes, reglas y aprendizaje.</p>
+              <input id="plan_context_owner" name="plan_context_owner" type="text" data-required autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="plan_sponsor">Patrocinador</label>
+              <input id="plan_sponsor" name="plan_sponsor" type="text" autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="plan_start">Día 0 <span class="required-mark">*</span></label>
+              <input id="plan_start" name="plan_start" type="date" data-required>
+            </div>
+            <div class="control">
+              <label for="plan_users">Usuarios piloto</label>
+              <input id="plan_users" name="plan_users" type="text" autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="plan_scope">Alcance del piloto</label>
+              <input id="plan_scope" name="plan_scope" type="text" autocomplete="off">
+            </div>
+            <div class="control control-wide">
+              <label for="plan_hypothesis">Hipótesis que se pone a prueba <span class="required-mark">*</span></label>
+              <textarea id="plan_hypothesis" name="plan_hypothesis" data-required></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="workbook-section print-page" aria-labelledby="plan-metricas">
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">M</span>
+            <div><h2 id="plan-metricas">Cuadro de métricas</h2><p>Utiliza la misma definición, unidad y fuente en todas las puertas. La comparación debe incluir revisión, corrección e integración.</p></div>
+          </div>
+          <div class="table-wrap">
+            <table class="workbook-table">
+              <thead><tr><th>Métrica</th><th>Línea base</th><th>Día 30</th><th>Día 60</th><th>Día 90</th><th>Unidad, fuente y responsable</th></tr></thead>
+              <tbody>
+                <tr><th>Tiempo de ciclo</th><td><input name="score_cycle_base" data-required aria-label="Ciclo línea base"></td><td><input name="score_cycle_30" aria-label="Ciclo día 30"></td><td><input name="score_cycle_60" aria-label="Ciclo día 60"></td><td><input name="score_cycle_90" aria-label="Ciclo día 90"></td><td><textarea name="score_cycle_source" aria-label="Fuente ciclo"></textarea></td></tr>
+                <tr><th>Tiempo humano total</th><td><input name="score_human_base" data-required aria-label="Tiempo humano línea base"></td><td><input name="score_human_30" aria-label="Tiempo humano día 30"></td><td><input name="score_human_60" aria-label="Tiempo humano día 60"></td><td><input name="score_human_90" aria-label="Tiempo humano día 90"></td><td><textarea name="score_human_source" aria-label="Fuente tiempo humano"></textarea></td></tr>
+                <tr><th>Calidad / aceptación</th><td><input name="score_quality_base" data-required aria-label="Calidad línea base"></td><td><input name="score_quality_30" aria-label="Calidad día 30"></td><td><input name="score_quality_60" aria-label="Calidad día 60"></td><td><input name="score_quality_90" aria-label="Calidad día 90"></td><td><textarea name="score_quality_source" aria-label="Fuente calidad"></textarea></td></tr>
+                <tr><th>Error / retrabajo</th><td><input name="score_error_base" aria-label="Error línea base"></td><td><input name="score_error_30" aria-label="Error día 30"></td><td><input name="score_error_60" aria-label="Error día 60"></td><td><input name="score_error_90" aria-label="Error día 90"></td><td><textarea name="score_error_source" aria-label="Fuente error"></textarea></td></tr>
+                <tr><th>Adopción / uso elegible</th><td><input name="score_adoption_base" aria-label="Adopción línea base"></td><td><input name="score_adoption_30" aria-label="Adopción día 30"></td><td><input name="score_adoption_60" aria-label="Adopción día 60"></td><td><input name="score_adoption_90" aria-label="Adopción día 90"></td><td><textarea name="score_adoption_source" aria-label="Fuente adopción"></textarea></td></tr>
+                <tr><th>Coste total</th><td><input name="score_cost_base" aria-label="Coste línea base"></td><td><input name="score_cost_30" aria-label="Coste día 30"></td><td><input name="score_cost_60" aria-label="Coste día 60"></td><td><input name="score_cost_90" aria-label="Coste día 90"></td><td><textarea name="score_cost_source" aria-label="Fuente coste"></textarea></td></tr>
+                <tr><th>Resultado de negocio</th><td><input name="score_business_base" aria-label="Resultado línea base"></td><td><input name="score_business_30" aria-label="Resultado día 30"></td><td><input name="score_business_60" aria-label="Resultado día 60"></td><td><input name="score_business_90" aria-label="Resultado día 90"></td><td><textarea name="score_business_source" aria-label="Fuente resultado"></textarea></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="subsection-title">Estimación conservadora de valor mensual realizado</h3>
+          <div class="input-grid input-grid-3">
+            <div class="control"><label for="value_volume">Volumen mensual</label><p class="control-hint">Casos elegibles.</p><input id="value_volume" name="value_volume" type="number" min="0" step="1"></div>
+            <div class="control"><label for="value_baseline_minutes">Minutos humanos antes</label><p class="control-hint">Ciclo de trabajo completo.</p><input id="value_baseline_minutes" name="value_baseline_minutes" type="number" min="0" step="0.1"></div>
+            <div class="control"><label for="value_pilot_minutes">Minutos humanos con piloto</label><p class="control-hint">Incluye revisión y corrección.</p><input id="value_pilot_minutes" name="value_pilot_minutes" type="number" min="0" step="0.1"></div>
+            <div class="control"><label for="value_hour_cost">Coste cargado por hora (€)</label><p class="control-hint">Coste defendible, no tarifa de venta.</p><input id="value_hour_cost" name="value_hour_cost" type="number" min="0" step="0.01"></div>
+            <div class="control"><label for="value_adoption">Adopción real (%)</label><p class="control-hint">Casos elegibles que usan el flujo.</p><input id="value_adoption" name="value_adoption" type="number" min="0" max="100" step="1"></div>
+            <div class="control"><label for="value_recurring_cost">Coste recurrente (€)</label><p class="control-hint">Modelo, licencias, integración y operación.</p><input id="value_recurring_cost" name="value_recurring_cost" type="number" min="0" step="0.01"></div>
+            <div class="control"><label for="value_review_cost">Revisión adicional (€)</label><p class="control-hint">Corrección no incluida en el tiempo por caso.</p><input id="value_review_cost" name="value_review_cost" type="number" min="0" step="0.01"></div>
+            <div class="control"><label for="value_incident_cost">Errores e incidentes (€)</label><p class="control-hint">Coste esperado o realizado.</p><input id="value_incident_cost" name="value_incident_cost" type="number" min="0" step="0.01"></div>
+          </div>
+          <div class="metric-panel">
+            <div class="metric-output"><span>Capacidad bruta realizada</span><output data-gross-value>0 €</output></div>
+            <div class="metric-output"><span>Valor neto mensual estimado</span><output data-net-value>0 €</output></div>
+          </div>
+          <div class="formula-box"><h3>No conviertas minutos en euros automáticamente</h3><p>El cálculo muestra capacidad liberada ponderada por adopción. Declara por separado si esa capacidad se convierte en menor coste, mayor volumen, mejor servicio o tiempo reasignado. Evita contabilizar dos veces el mismo beneficio.</p></div>
+        </section>
+
+        <section class="workbook-section gate-sheet print-page" aria-labelledby="gate1-title">
+          <span class="gate-day">Día 15</span>
+          <div class="workbook-section-heading"><span class="workbook-section-index">01</span><div><h2 id="gate1-title">Problema demostrado</h2><p>Antes de comprar o construir, demuestra que existe un proceso concreto y una línea base aceptada.</p></div></div>
+          <div class="check-grid">
+            <label class="check-item"><input type="checkbox" name="p1_process" data-required> Ficha del proceso y alcance.</label>
+            <label class="check-item"><input type="checkbox" name="p1_baseline" data-required> Línea base con periodo, muestra y fuente.</label>
+            <label class="check-item"><input type="checkbox" name="p1_owner" data-required> Propietario del resultado y del proceso.</label>
+            <label class="check-item"><input type="checkbox" name="p1_data" data-required> Clasificación de datos y límites iniciales.</label>
+            <label class="check-item"><input type="checkbox" name="p1_candidates" data-required> Tres alternativas comparadas.</label>
+            <label class="check-item"><input type="checkbox" name="p1_metric" data-required> Métrica de éxito y parada aceptadas por negocio.</label>
+          </div>
+          <div class="gate-criteria"><strong>Para avanzar</strong><p>Debe existir volumen suficiente, contexto accesible y una métrica que el negocio acepte. Si el problema no está cuantificado, no se compra.</p></div>
+          <div class="input-grid">
+            <div class="control"><label for="p1_date">Fecha de revisión</label><input id="p1_date" name="p1_date" type="date"></div>
+            <div class="control"><label for="p1_decider">Decisor</label><input id="p1_decider" name="p1_decider" type="text" autocomplete="off"></div>
+            <div class="control control-wide"><label for="p1_evidence">Evidencia, decisión y condiciones <span class="required-mark">*</span></label><textarea id="p1_evidence" name="p1_evidence" data-required></textarea></div>
+          </div>
+          <div class="decision-options" role="group" aria-label="Decisión puerta 1">
+            <label class="radio-item"><input type="radio" name="p1_decision" value="Avanzar" data-required> Avanzar</label>
+            <label class="radio-item"><input type="radio" name="p1_decision" value="Mantener limitado"> Mantener limitado</label>
+            <label class="radio-item"><input type="radio" name="p1_decision" value="Rediseñar"> Rediseñar</label>
+            <label class="radio-item"><input type="radio" name="p1_decision" value="Retirar"> Retirar</label>
+          </div>
+        </section>
+
+        <section class="workbook-section gate-sheet print-page" aria-labelledby="gate2-title">
+          <span class="gate-day">Día 30</span>
+          <div class="workbook-section-heading"><span class="workbook-section-index">02</span><div><h2 id="gate2-title">Método seguro</h2><p>Construye una forma de trabajo repetible, no una interacción brillante que solo funciona en manos de quien la creó.</p></div></div>
+          <div class="check-grid">
+            <label class="check-item"><input type="checkbox" name="p2_context" data-required> Paquete ContextOS versionado y con propietario.</label>
+            <label class="check-item"><input type="checkbox" name="p2_spec" data-required> Especificación de entrada, trabajo y salida.</label>
+            <label class="check-item"><input type="checkbox" name="p2_tests" data-required> Pruebas normales, límite, conflicto y fuera de política.</label>
+            <label class="check-item"><input type="checkbox" name="p2_tool" data-required> Herramienta, datos, contrato y permisos aprobados.</label>
+            <label class="check-item"><input type="checkbox" name="p2_controls" data-required> Revisión humana, registro, escalado e incidente.</label>
+            <label class="check-item"><input type="checkbox" name="p2_training" data-required> Usuarios piloto formados en tarea, límites y feedback.</label>
+          </div>
+          <div class="gate-criteria"><strong>Para avanzar</strong><p>Los casos normales se superan sin fallos graves y el sistema responde de forma segura ante información incompleta, conflicto de fuentes y solicitudes fuera de política.</p></div>
+          <div class="input-grid">
+            <div class="control"><label for="p2_date">Fecha de revisión</label><input id="p2_date" name="p2_date" type="date"></div>
+            <div class="control"><label for="p2_decider">Decisor</label><input id="p2_decider" name="p2_decider" type="text" autocomplete="off"></div>
+            <div class="control control-wide"><label for="p2_evidence">Resultados de prueba, fallos abiertos y condiciones <span class="required-mark">*</span></label><textarea id="p2_evidence" name="p2_evidence" data-required></textarea></div>
+          </div>
+          <div class="decision-options" role="group" aria-label="Decisión puerta 2">
+            <label class="radio-item"><input type="radio" name="p2_decision" value="Avanzar" data-required> Avanzar</label>
+            <label class="radio-item"><input type="radio" name="p2_decision" value="Mantener limitado"> Mantener limitado</label>
+            <label class="radio-item"><input type="radio" name="p2_decision" value="Rediseñar"> Rediseñar</label>
+            <label class="radio-item"><input type="radio" name="p2_decision" value="Retirar"> Retirar</label>
+          </div>
+        </section>
+
+        <section class="workbook-section gate-sheet print-page" aria-labelledby="gate3-title">
+          <span class="gate-day">Día 60</span>
+          <div class="workbook-section-heading"><span class="workbook-section-index">03</span><div><h2 id="gate3-title">Valor observado</h2><p>Mide uso real, no intención. Separa valor potencial de valor realizado y registra el coste de revisión que la demo suele ocultar.</p></div></div>
+          <div class="check-grid">
+            <label class="check-item"><input type="checkbox" name="p3_real_use" data-required> Uso real sobre casos elegibles y volumen conocido.</label>
+            <label class="check-item"><input type="checkbox" name="p3_errors" data-required> Errores clasificados por fuente, instrucción, modelo o control.</label>
+            <label class="check-item"><input type="checkbox" name="p3_net" data-required> Ahorro neto después de revisión, corrección y operación.</label>
+            <label class="check-item"><input type="checkbox" name="p3_quality" data-required> Calidad comparada con la misma definición de la línea base.</label>
+            <label class="check-item"><input type="checkbox" name="p3_adoption" data-required> Adopción y causas de abandono del flujo observadas.</label>
+            <label class="check-item"><input type="checkbox" name="p3_learning" data-required> Mejoras incorporadas al paquete ContextOS y a las pruebas.</label>
+          </div>
+          <div class="gate-criteria"><strong>Para avanzar</strong><p>Debe existir una tendencia de valor realizada, no solo potencial. Si el equipo evita el flujo o la revisión elimina el ahorro, se rediseña.</p></div>
+          <div class="input-grid">
+            <div class="control"><label for="p3_date">Fecha de revisión</label><input id="p3_date" name="p3_date" type="date"></div>
+            <div class="control"><label for="p3_decider">Decisor</label><input id="p3_decider" name="p3_decider" type="text" autocomplete="off"></div>
+            <div class="control"><label for="p3_adoption_reason">Adopción y fricciones</label><textarea id="p3_adoption_reason" name="p3_adoption_reason"></textarea></div>
+            <div class="control"><label for="p3_error_pattern">Patrones de error y correcciones</label><textarea id="p3_error_pattern" name="p3_error_pattern"></textarea></div>
+            <div class="control control-wide"><label for="p3_evidence">Evidencia de valor y condiciones <span class="required-mark">*</span></label><textarea id="p3_evidence" name="p3_evidence" data-required></textarea></div>
+          </div>
+          <div class="decision-options" role="group" aria-label="Decisión puerta 3">
+            <label class="radio-item"><input type="radio" name="p3_decision" value="Avanzar" data-required> Avanzar</label>
+            <label class="radio-item"><input type="radio" name="p3_decision" value="Mantener limitado"> Mantener limitado</label>
+            <label class="radio-item"><input type="radio" name="p3_decision" value="Rediseñar"> Rediseñar</label>
+            <label class="radio-item"><input type="radio" name="p3_decision" value="Retirar"> Retirar</label>
+          </div>
+        </section>
+
+        <section class="workbook-section gate-sheet print-page" aria-labelledby="gate4-title">
+          <span class="gate-day">Día 90</span>
+          <div class="workbook-section-heading"><span class="workbook-section-index">04</span><div><h2 id="gate4-title">Decisión de escala</h2><p>Convierte el aprendizaje del piloto en una decisión explícita y reversible, con costes, riesgos, continuidad y propiedad del contexto.</p></div></div>
+          <div class="check-grid">
+            <label class="check-item"><input type="checkbox" name="p4_case" data-required> Caso de negocio conservador con supuestos visibles.</label>
+            <label class="check-item"><input type="checkbox" name="p4_risk" data-required> Riesgos residuales, responsables y aceptación documentados.</label>
+            <label class="check-item"><input type="checkbox" name="p4_tco" data-required> Coste total: licencias, integración, revisión, operación y cambio.</label>
+            <label class="check-item"><input type="checkbox" name="p4_continuity" data-required> Plan de continuidad, sustitución o retirada.</label>
+            <label class="check-item"><input type="checkbox" name="p4_context" data-required> Propietario, revisión y presupuesto del ContextOS.</label>
+            <label class="check-item"><input type="checkbox" name="p4_decision_ready" data-required> Decisor con autoridad y evidencia preparada.</label>
+          </div>
+          <div class="gate-criteria"><strong>Decisión obligatoria</strong><p>Escalar, mantener limitado, rediseñar o retirar. “Seguir probando” solo es válido si existe una hipótesis nueva, un plazo y una puerta adicional explícita.</p></div>
+          <div class="input-grid">
+            <div class="control"><label for="p4_date">Fecha de decisión <span class="required-mark">*</span></label><input id="p4_date" name="p4_date" type="date" data-required></div>
+            <div class="control"><label for="p4_decider">Decisor y participantes <span class="required-mark">*</span></label><input id="p4_decider" name="p4_decider" type="text" data-required autocomplete="off"></div>
+            <div class="control"><label for="residual_risks">Riesgos residuales y aceptación</label><textarea id="residual_risks" name="residual_risks"></textarea></div>
+            <div class="control"><label for="continuity_plan">Continuidad, sustitución y retirada</label><textarea id="continuity_plan" name="continuity_plan"></textarea></div>
+            <div class="control control-wide"><label for="final_evidence">Resumen de evidencia y razonamiento <span class="required-mark">*</span></label><textarea id="final_evidence" name="final_evidence" class="tall" data-required></textarea></div>
+          </div>
+          <h3 class="subsection-title">Decisión final</h3>
+          <div class="decision-options" role="group" aria-label="Decisión final del piloto">
+            <label class="radio-item"><input type="radio" name="final_decision" value="Escalar" data-required> <span><strong>Escalar</strong><br>Ampliar con controles y capacidad operativa.</span></label>
+            <label class="radio-item"><input type="radio" name="final_decision" value="Mantener limitado"> <span><strong>Mantener limitado</strong><br>Conservar alcance, volumen o autonomía.</span></label>
+            <label class="radio-item"><input type="radio" name="final_decision" value="Rediseñar"> <span><strong>Rediseñar</strong><br>Nueva hipótesis, método o proceso.</span></label>
+            <label class="radio-item"><input type="radio" name="final_decision" value="Retirar"> <span><strong>Retirar</strong><br>Cerrar de forma controlada y conservar aprendizaje.</span></label>
+          </div>
+          <div class="input-grid" style="margin-top: 24px">
+            <div class="control"><label for="next_actions">Acciones, responsables y fechas <span class="required-mark">*</span></label><textarea id="next_actions" name="next_actions" class="tall" data-required></textarea></div>
+            <div class="control"><label for="assets_retained">Activo que queda aunque se pare <span class="required-mark">*</span></label><textarea id="assets_retained" name="assets_retained" class="tall" data-required placeholder="Proceso entendido, línea base, fuentes organizadas, criterios de calidad, pruebas y límites aprendidos."></textarea></div>
+          </div>
+        </section>
+      </form>
+
+      <p class="kit-footer-note">Cierra el piloto conservando la ficha del proceso, la línea base, el paquete ContextOS, el conjunto de pruebas, las métricas y el acta de decisión. Eso convierte la experimentación en capacidad organizativa.</p>
+    </div>
+  </main>
+</body>
+</html>
