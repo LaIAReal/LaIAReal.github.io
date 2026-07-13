@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Oportunidad y línea base — Kit La IA Real</title>
+  <meta name="description" content="Artefacto editable para definir un proceso, construir su línea base y decidir si merece un piloto de IA.">
+  <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="kit.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="utility-header kit-utility-header no-print">
+    <div class="container">
+      <a class="brand" href="kit-ia-real.html">
+        <img src="assets/brand-mark.svg" alt="" width="44" height="44">
+        <span>LA IA REAL</span>
+      </a>
+      <div class="kit-header-actions">
+        <a class="button button-quiet" href="kit-ia-real.html">Centro del kit</a>
+        <button class="button button-small" type="button" data-action="print">Imprimir / PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="workbook-main" id="contenido">
+    <div class="container">
+      <section class="workbook-hero">
+        <p class="eyebrow">Artefacto 01 · Puerta del día 15</p>
+        <h1>Oportunidad y línea base.</h1>
+        <p class="kit-lead">Define el proceso antes de elegir la herramienta. La línea base debe medir el ciclo completo —preparación, ejecución, revisión, corrección e integración— para que el ahorro no sea solo una impresión.</p>
+        <div class="evidence-callout">
+          <h3>Salida que debe producir</h3>
+          <p>Una ficha que permita a negocio afirmar: “este problema existe, tiene volumen, tiene propietario, conocemos su coste actual y sabremos cuándo el piloto funciona o debe parar”.</p>
+        </div>
+      </section>
+
+      <div class="workbook-toolbar no-print">
+        <div class="workbook-toolbar-row">
+          <div>
+            <strong>Progreso esencial: <span data-progress-value>0%</span></strong>
+            <div class="save-status" data-save-status>Los cambios se guardan en este navegador</div>
+          </div>
+          <div class="workbook-actions">
+            <button class="button button-quiet" type="button" data-action="save">Guardar</button>
+            <button class="button button-quiet" type="button" data-action="export">Exportar datos</button>
+            <button class="button button-quiet" type="button" data-action="import">Importar</button>
+            <button class="button button-danger" type="button" data-action="clear">Vaciar</button>
+          </div>
+        </div>
+        <div class="progress-track"><div class="progress-fill" data-progress-bar></div></div>
+        <input class="import-file" type="file" accept="application/json" data-import-file aria-label="Importar datos de oportunidad">
+      </div>
+
+      <form data-workbook="oportunidad" data-title="Oportunidad y línea base" novalidate>
+        <section class="workbook-section print-page" aria-labelledby="opp-identidad">
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">01</span>
+            <div><h2 id="opp-identidad">Mandato del piloto</h2><p>Pon nombre al trabajo, asigna responsabilidad y fija desde el principio cuándo se tomará una decisión.</p></div>
+          </div>
+          <div class="input-grid input-grid-3">
+            <div class="control control-wide">
+              <label for="pilot_name">Nombre del piloto <span class="required-mark">*</span></label>
+              <p class="control-hint">Nombra el proceso, no la tecnología. Ejemplo: “Preparación de propuestas comerciales”.</p>
+              <input id="pilot_name" name="pilot_name" type="text" data-required autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="business_owner">Propietario del resultado <span class="required-mark">*</span></label>
+              <p class="control-hint">Persona que responde de la métrica de negocio.</p>
+              <input id="business_owner" name="business_owner" type="text" data-required autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="process_owner">Propietario del proceso</label>
+              <p class="control-hint">Quien puede cambiar el flujo de trabajo.</p>
+              <input id="process_owner" name="process_owner" type="text" autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="pilot_sponsor">Patrocinador</label>
+              <p class="control-hint">Quien desbloquea tiempo, presupuesto y decisiones.</p>
+              <input id="pilot_sponsor" name="pilot_sponsor" type="text" autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="pilot_start">Fecha de inicio</label>
+              <p class="control-hint">Inicio del periodo de preparación.</p>
+              <input id="pilot_start" name="pilot_start" type="date">
+            </div>
+            <div class="control">
+              <label for="decision_date">Fecha de decisión <span class="required-mark">*</span></label>
+              <p class="control-hint">No una fecha de demo: una fecha de decisión.</p>
+              <input id="decision_date" name="decision_date" type="date" data-required>
+            </div>
+            <div class="control">
+              <label for="pilot_team">Equipo implicado</label>
+              <p class="control-hint">Usuarios, validadores, datos, seguridad y tecnología.</p>
+              <input id="pilot_team" name="pilot_team" type="text" autocomplete="off">
+            </div>
+          </div>
+        </section>
+
+        <section class="workbook-section print-page" aria-labelledby="opp-proceso">
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">02</span>
+            <div><h2 id="opp-proceso">Contrato del proceso</h2><p>Acota un trabajo observable. Si no puedes señalar cuándo empieza, cuándo termina y quién usa la salida, el caso todavía es demasiado amplio.</p></div>
+          </div>
+          <div class="input-grid">
+            <div class="control control-wide">
+              <label for="business_result">Resultado de negocio <span class="required-mark">*</span></label>
+              <p class="control-hint">Qué debe mejorar y por qué importa: margen, capacidad, plazo, calidad, riesgo o experiencia.</p>
+              <textarea id="business_result" name="business_result" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="process_trigger">Disparador e inicio <span class="required-mark">*</span></label>
+              <p class="control-hint">Hecho observable que pone en marcha el proceso.</p>
+              <textarea id="process_trigger" name="process_trigger" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="process_end">Salida, destinatario y final <span class="required-mark">*</span></label>
+              <p class="control-hint">Qué se entrega, quién lo utiliza y cuándo se considera terminado.</p>
+              <textarea id="process_end" name="process_end" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="inputs_sources">Entradas y fuentes actuales</label>
+              <p class="control-hint">Sistemas, documentos, datos y conocimiento humano.</p>
+              <textarea id="inputs_sources" name="inputs_sources"></textarea>
+            </div>
+            <div class="control">
+              <label for="process_steps">Pasos y decisiones actuales</label>
+              <p class="control-hint">Incluye revisión, esperas, aprobaciones y correcciones.</p>
+              <textarea id="process_steps" name="process_steps"></textarea>
+            </div>
+            <div class="control">
+              <label for="scope_in">Dentro del alcance</label>
+              <p class="control-hint">Tipos de caso, equipos, países, canales o productos incluidos.</p>
+              <textarea id="scope_in" name="scope_in"></textarea>
+            </div>
+            <div class="control">
+              <label for="scope_out">Fuera del alcance</label>
+              <p class="control-hint">Exclusiones explícitas para que el piloto no crezca por inercia.</p>
+              <textarea id="scope_out" name="scope_out"></textarea>
+            </div>
+            <div class="control">
+              <label for="exceptions">Excepciones y ruta humana</label>
+              <p class="control-hint">Qué casos no siguen la ruta normal y quién debe resolverlos.</p>
+              <textarea id="exceptions" name="exceptions"></textarea>
+            </div>
+            <div class="control">
+              <label for="data_classification">Clasificación de datos <span class="required-mark">*</span></label>
+              <p class="control-hint">Elige la clase más sensible que aparecerá en el proceso.</p>
+              <select id="data_classification" name="data_classification" data-required>
+                <option value="">Selecciona</option>
+                <option>Públicos</option>
+                <option>Internos</option>
+                <option>Confidenciales</option>
+                <option>Restringidos o regulados</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="workbook-section print-page" aria-labelledby="opp-base">
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">03</span>
+            <div><h2 id="opp-base">Línea base del ciclo completo</h2><p>Utiliza un periodo y una muestra representativos. Separa tiempo de ciclo, trabajo humano, errores y resultado de negocio.</p></div>
+          </div>
+          <div class="input-grid input-grid-3">
+            <div class="control">
+              <label for="baseline_period">Periodo medido <span class="required-mark">*</span></label>
+              <p class="control-hint">Ejemplo: abril–junio de 2026.</p>
+              <input id="baseline_period" name="baseline_period" type="text" data-required autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="baseline_sample">Tamaño de la muestra</label>
+              <p class="control-hint">Número de casos observados.</p>
+              <input id="baseline_sample" name="baseline_sample" type="number" min="0" step="1">
+            </div>
+            <div class="control">
+              <label for="baseline_volume">Volumen mensual <span class="required-mark">*</span></label>
+              <p class="control-hint">Casos procesados por mes.</p>
+              <input id="baseline_volume" name="baseline_volume" type="number" min="0" step="1" data-required>
+            </div>
+            <div class="control">
+              <label for="baseline_human_minutes">Minutos humanos por caso <span class="required-mark">*</span></label>
+              <p class="control-hint">Preparar + ejecutar + revisar + corregir + integrar.</p>
+              <input id="baseline_human_minutes" name="baseline_human_minutes" type="number" min="0" step="0.1" data-required>
+            </div>
+            <div class="control">
+              <label for="baseline_hour_cost">Coste cargado por hora (€)</label>
+              <p class="control-hint">Salario, cargas y costes indirectos razonables.</p>
+              <input id="baseline_hour_cost" name="baseline_hour_cost" type="number" min="0" step="0.01">
+            </div>
+            <div class="control">
+              <label for="baseline_fixed_cost">Coste fijo mensual (€)</label>
+              <p class="control-hint">Licencias, proveedores y operación actual.</p>
+              <input id="baseline_fixed_cost" name="baseline_fixed_cost" type="number" min="0" step="0.01">
+            </div>
+            <div class="control">
+              <label for="baseline_error_cost">Coste mensual de errores (€)</label>
+              <p class="control-hint">Retrabajo, compensaciones, retrasos o riesgo realizado.</p>
+              <input id="baseline_error_cost" name="baseline_error_cost" type="number" min="0" step="0.01">
+            </div>
+            <div class="control control-wide">
+              <label for="baseline_evidence">Fuente y método de medición <span class="required-mark">*</span></label>
+              <p class="control-hint">De dónde salen los datos, quién los valida y qué limitación tienen.</p>
+              <textarea id="baseline_evidence" name="baseline_evidence" data-required></textarea>
+            </div>
+          </div>
+
+          <div class="metric-panel">
+            <div class="metric-output"><span>Coste mensual de referencia</span><output data-baseline-cost>0 €</output></div>
+            <div class="formula-box"><h3>Fórmula visible</h3><p>Volumen × minutos humanos ÷ 60 × coste/hora + costes fijos + coste de errores. Ajusta la fórmula en tu caso de negocio si existen esperas, capacidad liberada no realizable o costes no mensuales.</p></div>
+          </div>
+
+          <h3 class="subsection-title">Cuadro de comparación</h3>
+          <div class="table-wrap">
+            <table class="workbook-table">
+              <thead><tr><th>Métrica</th><th>Línea base</th><th>Unidad</th><th>Fuente</th><th>Objetivo piloto</th><th>Umbral mínimo aceptable</th></tr></thead>
+              <tbody>
+                <tr><th>Tiempo de ciclo</th><td><input name="metric_cycle_base" aria-label="Tiempo de ciclo línea base"></td><td><input name="metric_cycle_unit" aria-label="Unidad del tiempo de ciclo"></td><td><input name="metric_cycle_source" aria-label="Fuente del tiempo de ciclo"></td><td><input name="metric_cycle_target" aria-label="Objetivo del tiempo de ciclo"></td><td><input name="metric_cycle_threshold" aria-label="Umbral de tiempo de ciclo"></td></tr>
+                <tr><th>Calidad / aceptación</th><td><input name="metric_quality_base" aria-label="Calidad línea base"></td><td><input name="metric_quality_unit" aria-label="Unidad de calidad"></td><td><input name="metric_quality_source" aria-label="Fuente de calidad"></td><td><input name="metric_quality_target" aria-label="Objetivo de calidad"></td><td><input name="metric_quality_threshold" aria-label="Umbral de calidad"></td></tr>
+                <tr><th>Error / retrabajo</th><td><input name="metric_error_base" aria-label="Error línea base"></td><td><input name="metric_error_unit" aria-label="Unidad de error"></td><td><input name="metric_error_source" aria-label="Fuente de error"></td><td><input name="metric_error_target" aria-label="Objetivo de error"></td><td><input name="metric_error_threshold" aria-label="Umbral de error"></td></tr>
+                <tr><th>Resultado de negocio</th><td><input name="metric_business_base" aria-label="Resultado de negocio línea base"></td><td><input name="metric_business_unit" aria-label="Unidad del resultado de negocio"></td><td><input name="metric_business_source" aria-label="Fuente del resultado de negocio"></td><td><input name="metric_business_target" aria-label="Objetivo del resultado de negocio"></td><td><input name="metric_business_threshold" aria-label="Umbral del resultado de negocio"></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="workbook-section print-page" aria-labelledby="opp-alternativas">
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">04</span>
+            <div><h2 id="opp-alternativas">Alternativas e hipótesis</h2><p>La decisión no es “IA o nada”. Compara mejora de proceso, automatización convencional y capacidad de IA antes de escoger.</p></div>
+          </div>
+          <div class="table-wrap">
+            <table class="workbook-table">
+              <thead><tr><th>Alternativa</th><th>Cómo resuelve el problema</th><th>Encaje con datos y riesgo</th><th>Integración / adopción</th><th>Coste total estimado</th><th>Evidencia o prueba rápida</th></tr></thead>
+              <tbody>
+                <tr><td><input name="candidate_1_name" value="Mejora de proceso" aria-label="Alternativa 1"></td><td><textarea name="candidate_1_fit" aria-label="Encaje alternativa 1"></textarea></td><td><textarea name="candidate_1_risk" aria-label="Riesgo alternativa 1"></textarea></td><td><textarea name="candidate_1_adoption" aria-label="Adopción alternativa 1"></textarea></td><td><input name="candidate_1_cost" aria-label="Coste alternativa 1"></td><td><textarea name="candidate_1_evidence" aria-label="Evidencia alternativa 1"></textarea></td></tr>
+                <tr><td><input name="candidate_2_name" value="Automatización convencional" aria-label="Alternativa 2"></td><td><textarea name="candidate_2_fit" aria-label="Encaje alternativa 2"></textarea></td><td><textarea name="candidate_2_risk" aria-label="Riesgo alternativa 2"></textarea></td><td><textarea name="candidate_2_adoption" aria-label="Adopción alternativa 2"></textarea></td><td><input name="candidate_2_cost" aria-label="Coste alternativa 2"></td><td><textarea name="candidate_2_evidence" aria-label="Evidencia alternativa 2"></textarea></td></tr>
+                <tr><td><input name="candidate_3_name" value="Capacidad de IA" aria-label="Alternativa 3"></td><td><textarea name="candidate_3_fit" aria-label="Encaje alternativa 3"></textarea></td><td><textarea name="candidate_3_risk" aria-label="Riesgo alternativa 3"></textarea></td><td><textarea name="candidate_3_adoption" aria-label="Adopción alternativa 3"></textarea></td><td><input name="candidate_3_cost" aria-label="Coste alternativa 3"></td><td><textarea name="candidate_3_evidence" aria-label="Evidencia alternativa 3"></textarea></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="input-grid" style="margin-top: 24px">
+            <div class="control">
+              <label for="selected_candidate">Alternativa seleccionada <span class="required-mark">*</span></label>
+              <p class="control-hint">Incluye la capacidad concreta, no solo “usar IA”.</p>
+              <input id="selected_candidate" name="selected_candidate" type="text" data-required autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="why_now">Por qué ahora</label>
+              <p class="control-hint">Cambio de volumen, coste, calidad, tecnología o riesgo.</p>
+              <input id="why_now" name="why_now" type="text" autocomplete="off">
+            </div>
+            <div class="control control-wide">
+              <label for="pilot_hypothesis">Hipótesis verificable <span class="required-mark">*</span></label>
+              <p class="control-hint">Si aplicamos [capacidad] al [proceso] con [contexto y controles], entonces [métrica] pasará de [línea base] a [objetivo] para [fecha].</p>
+              <textarea id="pilot_hypothesis" name="pilot_hypothesis" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="success_criteria">Métrica y criterio de éxito <span class="required-mark">*</span></label>
+              <p class="control-hint">Umbral, periodo, muestra y quién lo acepta.</p>
+              <textarea id="success_criteria" name="success_criteria" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="stop_criteria">Criterio de parada <span class="required-mark">*</span></label>
+              <p class="control-hint">Qué dato obliga a limitar, rediseñar o retirar.</p>
+              <textarea id="stop_criteria" name="stop_criteria" data-required></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="workbook-section gate-sheet print-page" aria-labelledby="opp-puerta">
+          <span class="gate-day">Día 15</span>
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">05</span>
+            <div><h2 id="opp-puerta">Puerta 1 · Problema demostrado</h2><p>El plan avanza por evidencia. Marca únicamente lo que puedas enseñar, no lo que esperas completar después.</p></div>
+          </div>
+          <div class="check-grid">
+            <label class="check-item"><input type="checkbox" name="gate1_process" data-required> El proceso tiene inicio, final, entrada, salida y alcance definidos.</label>
+            <label class="check-item"><input type="checkbox" name="gate1_owner" data-required> Hay propietario del resultado y propietario del proceso.</label>
+            <label class="check-item"><input type="checkbox" name="gate1_baseline" data-required> La línea base usa muestra, periodo, fuente y método conocidos.</label>
+            <label class="check-item"><input type="checkbox" name="gate1_volume" data-required> Existe volumen suficiente para observar una diferencia.</label>
+            <label class="check-item"><input type="checkbox" name="gate1_context" data-required> El contexto necesario existe o puede construirse durante el piloto.</label>
+            <label class="check-item"><input type="checkbox" name="gate1_metric" data-required> Negocio acepta la métrica de éxito y el criterio de parada.</label>
+            <label class="check-item"><input type="checkbox" name="gate1_data" data-required> Los datos están clasificados y se conocen los límites iniciales.</label>
+            <label class="check-item"><input type="checkbox" name="gate1_candidates" data-required> Se han comparado al menos tres alternativas.</label>
+          </div>
+          <div class="gate-criteria"><strong>Criterio del libro</strong><p>Para avanzar debe existir volumen suficiente, contexto accesible y una métrica que el negocio acepte. Si el problema no está cuantificado, no se compra.</p></div>
+          <div class="input-grid">
+            <div class="control">
+              <label for="gate1_decision">Decisión de la puerta <span class="required-mark">*</span></label>
+              <select id="gate1_decision" name="gate1_decision" data-required>
+                <option value="">Selecciona</option>
+                <option>Avanzar a diseño seguro</option>
+                <option>Mantener limitado y completar evidencia</option>
+                <option>Rediseñar el caso</option>
+                <option>Retirar el caso</option>
+              </select>
+            </div>
+            <div class="control">
+              <label for="gate1_decider">Quién decide y fecha</label>
+              <input id="gate1_decider" name="gate1_decider" type="text" autocomplete="off">
+            </div>
+            <div class="control control-wide">
+              <label for="gate1_evidence">Evidencia y condiciones de la decisión <span class="required-mark">*</span></label>
+              <textarea id="gate1_evidence" name="gate1_evidence" class="tall" data-required></textarea>
+            </div>
+          </div>
+        </section>
+      </form>
+
+      <p class="kit-footer-note">Siguiente artefacto: <a href="kit-contextos.html">construir el paquete ContextOS</a>. Exporta este archivo si vas a continuar en otro dispositivo o necesitas conservar una versión de la decisión.</p>
+    </div>
+  </main>
+</body>
+</html>

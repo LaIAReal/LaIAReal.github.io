@@ -4,108 +4,125 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>Kit La IA Real — Primer piloto de IA</title>
-  <meta name="description" content="Tres plantillas para convertir una idea de inteligencia artificial en un piloto seguro y medible.">
+  <title>Kit La IA Real — De la idea a una decisión en 90 días</title>
+  <meta name="description" content="Tres herramientas de trabajo para elegir un proceso, construir su ContextOS y decidir con evidencia si un piloto de IA debe escalar.">
   <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script src="kit.js" defer></script>
 </head>
 <body>
-  <header class="utility-header no-print">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="utility-header kit-utility-header">
     <div class="container">
       <a class="brand" href="index.html">
         <img src="assets/brand-mark.svg" alt="" width="44" height="44">
         <span>LA IA REAL</span>
       </a>
-      <button class="button" type="button" onclick="window.print()">Guardar como PDF</button>
+      <div class="kit-header-actions">
+        <a class="button button-quiet" href="index.html">Volver al libro</a>
+        <a class="button button-small" href="kit-oportunidad.html">Empezar el kit</a>
+      </div>
     </div>
   </header>
 
-  <main class="utility-main">
+  <main class="kit-hub-main" id="contenido">
     <div class="container">
-      <section class="utility-intro">
-        <p class="eyebrow">Kit de trabajo gratuito</p>
-        <h1>Diseña tu primer piloto de IA con criterio.</h1>
-        <p class="hero-lead">Tres plantillas para pasar de una idea genérica a un proceso, un contexto y una decisión de escala. Imprímelas o guárdalas como PDF.</p>
-        <p><strong>Regla de uso:</strong> completa el kit con un proceso real delante. Si no puedes describir cómo se trabaja hoy, todavía no necesitas una herramienta.</p>
-      </section>
-
-      <section class="worksheet" aria-labelledby="ficha-title">
-        <div class="worksheet-header">
-          <div>
-            <p class="eyebrow">Plantilla</p>
-            <h2 id="ficha-title">Ficha de oportunidad</h2>
-          </div>
-          <span class="worksheet-number">01</span>
-        </div>
-        <div class="field-grid">
-          <div class="field field-wide"><strong>Resultado de negocio</strong><span>¿Qué debería mejorar y por qué importa?</span></div>
-          <div class="field"><strong>Proceso concreto</strong><span>Disparador, inicio y final.</span></div>
-          <div class="field"><strong>Propietario</strong><span>Persona responsable del resultado.</span></div>
-          <div class="field"><strong>Volumen actual</strong><span>Casos por semana o mes.</span></div>
-          <div class="field"><strong>Tiempo de ciclo</strong><span>Desde la petición hasta el uso.</span></div>
-          <div class="field"><strong>Calidad actual</strong><span>Errores, retrabajo y excepciones.</span></div>
-          <div class="field"><strong>Coste actual</strong><span>Horas, licencias y coste de error.</span></div>
-          <div class="field field-wide"><strong>Métrica de éxito</strong><span>La cifra que permitirá comparar antes y después.</span></div>
-          <div class="field field-wide"><strong>Criterio de parada</strong><span>¿Qué resultado obligaría a rediseñar o retirar el piloto?</span></div>
+      <section class="kit-hub-intro">
+        <p class="eyebrow">Kit operativo gratuito</p>
+        <h1>De una idea de IA a una decisión defendible.</h1>
+        <p class="kit-lead">No es una colección de casillas. Es la carpeta mínima de evidencia para elegir un proceso, construir su contexto operativo y decidir en 90 días si conviene escalar, mantener limitado, rediseñar o retirar.</p>
+        <div class="local-data-note">
+          <strong>Tus datos no salen del navegador.</strong>
+          <span>El trabajo se guarda localmente en este dispositivo. Puedes exportar cada artefacto como archivo JSON para conservarlo, moverlo o compartirlo con tu equipo, y guardarlo como PDF desde la opción de impresión.</span>
         </div>
       </section>
 
-      <section class="worksheet" aria-labelledby="contexto-title">
-        <div class="worksheet-header">
-          <div>
-            <p class="eyebrow">Plantilla</p>
-            <h2 id="contexto-title">Paquete de contexto</h2>
-          </div>
-          <span class="worksheet-number">02</span>
-        </div>
-        <div class="field-grid">
-          <div class="field field-wide"><strong>Propósito y audiencia</strong><span>Qué tarea se realiza, para quién y cómo se usará la salida.</span></div>
-          <div class="field"><strong>Fuentes autorizadas</strong><span>Propietario, versión y fecha de revisión.</span></div>
-          <div class="field"><strong>Reglas de negocio</strong><span>Criterios que nunca deben improvisarse.</span></div>
-          <div class="field"><strong>Ejemplos aprobados</strong><span>Dos resultados buenos y por qué lo son.</span></div>
-          <div class="field"><strong>Excepciones</strong><span>Casos que requieren otra ruta o una persona.</span></div>
-          <div class="field"><strong>Restricciones</strong><span>Datos, tono, legal, comercial y seguridad.</span></div>
-          <div class="field"><strong>Formato de salida</strong><span>Estructura, extensión y campos obligatorios.</span></div>
-          <div class="field field-wide"><strong>Criterios de aceptación</strong><span>Qué revisará la persona validadora antes de aprobar el resultado.</span></div>
-          <div class="field field-wide"><strong>Responsable e historial</strong><span>Quién mantiene el contexto y cuándo se modificó por última vez.</span></div>
+      <ol class="kit-start-grid" aria-label="Cómo utilizar el kit">
+        <li><strong>Elige un proceso</strong><span>Un trabajo con entrada, salida, volumen y propietario.</span></li>
+        <li><strong>Mide cómo funciona hoy</strong><span>El ciclo completo: preparación, revisión, corrección e integración.</span></li>
+        <li><strong>Construye contexto mínimo</strong><span>Fuentes vigentes, criterios, permisos, pruebas y responsable.</span></li>
+        <li><strong>Avanza por evidencia</strong><span>Cada puerta termina con una decisión explícita, no con “seguir probando”.</span></li>
+      </ol>
+
+      <section aria-labelledby="artefactos-title">
+        <p class="eyebrow">Tu carpeta de piloto</p>
+        <h2 id="artefactos-title">Tres artefactos. Una secuencia de trabajo.</h2>
+
+        <div class="artifact-grid">
+          <article class="artifact-card" data-kit-progress-for="oportunidad">
+            <div class="artifact-index"><span>01</span><span data-card-progress>0%</span></div>
+            <h2>Oportunidad y línea base</h2>
+            <p>Convierte una intención genérica en un proceso medible y una hipótesis que el negocio pueda aceptar o rechazar.</p>
+            <ul class="artifact-output-list">
+              <li>Contrato del proceso y alcance</li>
+              <li>Línea base de tiempo, calidad y coste</li>
+              <li>Comparación de tres alternativas</li>
+              <li>Métrica de éxito y criterio de parada</li>
+            </ul>
+            <div class="artifact-progress">
+              <div class="progress-label"><span>Progreso esencial</span><strong data-card-progress>0%</strong></div>
+              <div class="progress-track"><div class="progress-fill" data-card-progress-bar></div></div>
+              <p class="progress-meta" data-card-status>Todavía sin completar</p>
+              <a class="button button-full" href="kit-oportunidad.html">Abrir artefacto</a>
+            </div>
+          </article>
+
+          <article class="artifact-card" data-kit-progress-for="contextos">
+            <div class="artifact-index"><span>02</span><span data-card-progress>0%</span></div>
+            <h2>Paquete ContextOS</h2>
+            <p>Entrega a una tarea la información correcta, en la versión correcta, con permisos y una forma de comprobar el resultado.</p>
+            <ul class="artifact-output-list">
+              <li>Las cinco piezas de ContextOS</li>
+              <li>Registro de fuentes gobernadas</li>
+              <li>Especificación de salida y aceptación</li>
+              <li>Casos de prueba y aprendizaje</li>
+            </ul>
+            <div class="artifact-progress">
+              <div class="progress-label"><span>Progreso esencial</span><strong data-card-progress>0%</strong></div>
+              <div class="progress-track"><div class="progress-fill" data-card-progress-bar></div></div>
+              <p class="progress-meta" data-card-status>Todavía sin completar</p>
+              <a class="button button-full" href="kit-contextos.html">Abrir artefacto</a>
+            </div>
+          </article>
+
+          <article class="artifact-card" data-kit-progress-for="plan90">
+            <div class="artifact-index"><span>03</span><span data-card-progress>0%</span></div>
+            <h2>Cuatro puertas en 90 días</h2>
+            <p>Dirige el piloto por evidencia y registra quién decide, con qué datos y qué debe ocurrir después.</p>
+            <ul class="artifact-output-list">
+              <li>Puertas de los días 15, 30, 60 y 90</li>
+              <li>Cuadro de métricas comparables</li>
+              <li>Cálculo conservador de valor neto</li>
+              <li>Decisión final y plan de continuidad</li>
+            </ul>
+            <div class="artifact-progress">
+              <div class="progress-label"><span>Progreso esencial</span><strong data-card-progress>0%</strong></div>
+              <div class="progress-track"><div class="progress-fill" data-card-progress-bar></div></div>
+              <p class="progress-meta" data-card-status>Todavía sin completar</p>
+              <a class="button button-full" href="kit-plan-90-dias.html">Abrir artefacto</a>
+            </div>
+          </article>
         </div>
       </section>
 
-      <section class="worksheet" aria-labelledby="puertas-title">
-        <div class="worksheet-header">
-          <div>
-            <p class="eyebrow">Plan de 90 días</p>
-            <h2 id="puertas-title">Cuatro puertas de decisión</h2>
-          </div>
-          <span class="worksheet-number">03</span>
+      <section class="contextos-principles" aria-labelledby="contextos-title">
+        <div>
+          <p class="eyebrow">La arquitectura del kit</p>
+          <h2 id="contextos-title">ContextOS convierte conocimiento disperso en contexto operativo.</h2>
+          <p>El activo no es el prompt. Es un sistema que permite cambiar de herramienta sin perder cómo decide, trabaja y aprende la empresa.</p>
+          <ul class="principle-list">
+            <li><strong>Identidad y criterio</strong><span>Qué importa, qué no se promete y quién aprueba.</span></li>
+            <li><strong>Conocimiento validado</strong><span>Fuentes vigentes con propietario, versión y ámbito.</span></li>
+            <li><strong>Procesos y decisiones</strong><span>Pasos, reglas, excepciones y evidencia.</span></li>
+            <li><strong>Permisos y riesgo</strong><span>Datos permitidos, herramientas, registros y límites.</span></li>
+            <li><strong>Evidencia y aprendizaje</strong><span>Pruebas, errores, correcciones y métricas que vuelven al sistema.</span></li>
+          </ul>
         </div>
-        <div class="gate-grid">
-          <article class="gate">
-            <p class="eyebrow">Día 15</p>
-            <h3>Puerta 1 · Problema demostrado</h3>
-            <p>Proceso, línea base, propietario, datos y tres candidatos comparados. Si el problema no está cuantificado, no se compra.</p>
-          </article>
-          <article class="gate">
-            <p class="eyebrow">Día 30</p>
-            <h3>Puerta 2 · Método seguro</h3>
-            <p>Contexto, especificación, pruebas, herramienta aprobada, controles y formación de usuarios piloto.</p>
-          </article>
-          <article class="gate">
-            <p class="eyebrow">Día 60</p>
-            <h3>Puerta 3 · Valor observado</h3>
-            <p>Uso real, errores, ahorro neto, calidad y adopción. Si la revisión elimina el ahorro, se rediseña.</p>
-          </article>
-          <article class="gate">
-            <p class="eyebrow">Día 90</p>
-            <h3>Puerta 4 · Decisión de escala</h3>
-            <p>Caso de negocio, riesgos, coste total, continuidad y decisión: escalar, limitar, rediseñar o retirar.</p>
-          </article>
-        </div>
-        <div class="field-grid" style="margin-top: 22px">
-          <div class="field field-wide"><strong>Decisión final y evidencia</strong><span>Registra qué se decide, quién responde y qué dato sostiene la decisión.</span></div>
-          <div class="field field-wide"><strong>Qué queda aunque el piloto pare</strong><span>Proceso entendido, fuentes organizadas, criterios de calidad y límites aprendidos.</span></div>
-        </div>
+        <img src="assets/contextos-arquitectura.png" alt="ContextOS reúne identidad, conocimiento, procesos, permisos y aprendizaje para producir un paquete de contexto que alimenta una tarea con IA y recibe sus aprendizajes" width="1600" height="700">
       </section>
+
+      <p class="kit-footer-note">Kit basado en el método de <em>La IA Real</em>. Utilízalo con un proceso real y valida cualquier decisión jurídica, laboral, de seguridad o protección de datos con los responsables correspondientes.</p>
     </div>
   </main>
 </body>

@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Paquete ContextOS — Kit La IA Real</title>
+  <meta name="description" content="Artefacto editable para convertir conocimiento, reglas, permisos y evidencia en contexto operativo para una tarea con IA.">
+  <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="kit.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="utility-header kit-utility-header no-print">
+    <div class="container">
+      <a class="brand" href="kit-ia-real.html">
+        <img src="assets/brand-mark.svg" alt="" width="44" height="44">
+        <span>LA IA REAL</span>
+      </a>
+      <div class="kit-header-actions">
+        <a class="button button-quiet" href="kit-ia-real.html">Centro del kit</a>
+        <button class="button button-small" type="button" data-action="print">Imprimir / PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="workbook-main" id="contenido">
+    <div class="container">
+      <section class="workbook-hero">
+        <p class="eyebrow">Artefacto 02 · ContextOS · Puerta del día 30</p>
+        <h1>Paquete de contexto operativo.</h1>
+        <p class="kit-lead">No entregues toda la empresa a cada tarea. Reúne el contexto mínimo, vigente y autorizado que una persona competente utiliza para producir una salida comprobable.</p>
+        <div class="evidence-callout">
+          <h3>Definición operativa</h3>
+          <p>ContextOS entrega a cada tarea la información correcta, en la versión correcta, con los permisos correctos y con una forma de comprobar el resultado. Este artefacto es una instancia de ese sistema para un proceso concreto.</p>
+        </div>
+      </section>
+
+      <div class="workbook-toolbar no-print">
+        <div class="workbook-toolbar-row">
+          <div>
+            <strong>Progreso esencial: <span data-progress-value>0%</span></strong>
+            <div class="save-status" data-save-status>Los cambios se guardan en este navegador</div>
+          </div>
+          <div class="workbook-actions">
+            <button class="button button-quiet" type="button" data-action="save">Guardar</button>
+            <button class="button button-quiet" type="button" data-action="export">Exportar datos</button>
+            <button class="button button-quiet" type="button" data-action="import">Importar</button>
+            <button class="button button-danger" type="button" data-action="clear">Vaciar</button>
+          </div>
+        </div>
+        <div class="progress-track"><div class="progress-fill" data-progress-bar></div></div>
+        <input class="import-file" type="file" accept="application/json" data-import-file aria-label="Importar paquete ContextOS">
+      </div>
+
+      <figure class="workbook-diagram">
+        <img src="assets/contextos-arquitectura.png" alt="Arquitectura ContextOS: identidad, conocimiento, procesos, permisos y aprendizaje producen un paquete de contexto para una tarea con IA" width="1600" height="700">
+        <figcaption>El paquete es mínimo y específico para una tarea. Los errores, correcciones y métricas vuelven al sistema.</figcaption>
+      </figure>
+
+      <form data-workbook="contextos" data-title="Paquete ContextOS" novalidate>
+        <section class="workbook-section print-page" aria-labelledby="ctx-control">
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">00</span>
+            <div><h2 id="ctx-control">Control del paquete</h2><p>El contexto es un activo versionado. Si nadie responde de su vigencia, se convierte en deuda de contexto.</p></div>
+          </div>
+          <div class="input-grid input-grid-3">
+            <div class="control control-wide">
+              <label for="package_name">Nombre del paquete <span class="required-mark">*</span></label>
+              <p class="control-hint">Ejemplo: “Propuesta comercial B2B · España”.</p>
+              <input id="package_name" name="package_name" type="text" data-required autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="context_process">Proceso y tarea <span class="required-mark">*</span></label>
+              <p class="control-hint">Una tarea concreta dentro del proceso.</p>
+              <input id="context_process" name="context_process" type="text" data-required autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="context_owner">Propietario del contexto <span class="required-mark">*</span></label>
+              <p class="control-hint">Puede corregir fuentes, reglas y metadatos.</p>
+              <input id="context_owner" name="context_owner" type="text" data-required autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="context_validator">Responsable de validación <span class="required-mark">*</span></label>
+              <p class="control-hint">Aprueba la salida antes de que produzca efectos.</p>
+              <input id="context_validator" name="context_validator" type="text" data-required autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="context_version">Versión <span class="required-mark">*</span></label>
+              <p class="control-hint">Ejemplo: 1.0.</p>
+              <input id="context_version" name="context_version" type="text" data-required autocomplete="off">
+            </div>
+            <div class="control">
+              <label for="context_reviewed">Última revisión</label>
+              <p class="control-hint">Fecha en que se comprobó la vigencia.</p>
+              <input id="context_reviewed" name="context_reviewed" type="date">
+            </div>
+            <div class="control">
+              <label for="context_next_review">Próxima revisión <span class="required-mark">*</span></label>
+              <p class="control-hint">Anticípala si cambian precios, políticas o normativa.</p>
+              <input id="context_next_review" name="context_next_review" type="date" data-required>
+            </div>
+            <div class="control control-wide">
+              <label for="context_scope">Ámbito y límites de esta versión</label>
+              <textarea id="context_scope" name="context_scope" placeholder="Clientes, mercados, productos, idioma y situaciones incluidas o excluidas."></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="workbook-section context-layer print-page" aria-labelledby="ctx-identidad">
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">01</span>
+            <div><h2 id="ctx-identidad">Identidad y criterio</h2><p>Explicita cómo decide la empresa: prioridades, compromisos, límites y aprobaciones. Una misión genérica no sustituye a un criterio operativo.</p></div>
+          </div>
+          <div class="input-grid">
+            <div class="control control-wide">
+              <label for="task_purpose">Propósito de la tarea <span class="required-mark">*</span></label>
+              <p class="control-hint">Qué decisión o trabajo habilita y qué resultado de negocio protege.</p>
+              <textarea id="task_purpose" name="task_purpose" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="task_audience">Audiencia y uso de la salida <span class="required-mark">*</span></label>
+              <p class="control-hint">Quién la recibe, para qué la utilizará y qué podría ocurrir después.</p>
+              <textarea id="task_audience" name="task_audience" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="identity_tone">Identidad, tono y compromisos</label>
+              <p class="control-hint">Cómo debe sonar y qué compromisos de marca o servicio prevalecen.</p>
+              <textarea id="identity_tone" name="identity_tone"></textarea>
+            </div>
+            <div class="control">
+              <label for="decision_criteria">Criterios operativos priorizados <span class="required-mark">*</span></label>
+              <p class="control-hint">Usa reglas verificables: umbrales, precedencias y evidencia.</p>
+              <textarea id="decision_criteria" name="decision_criteria" class="tall" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="forbidden_claims">Qué no se promete ni se decide <span class="required-mark">*</span></label>
+              <p class="control-hint">Afirmaciones prohibidas, decisiones reservadas y límites absolutos.</p>
+              <textarea id="forbidden_claims" name="forbidden_claims" class="tall" data-required></textarea>
+            </div>
+            <div class="control control-wide">
+              <label for="approval_rules">Qué requiere aprobación y de quién</label>
+              <textarea id="approval_rules" name="approval_rules" placeholder="Condición → rol que aprueba → evidencia que debe conservarse."></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="workbook-section context-layer print-page" aria-labelledby="ctx-fuentes">
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">02</span>
+            <div><h2 id="ctx-fuentes">Conocimiento validado</h2><p>Cada fuente necesita propietario, versión, fecha, estado, sensibilidad y ámbito. Enlaza la fuente; no la copies dentro de veinte prompts.</p></div>
+          </div>
+          <div class="table-wrap">
+            <table class="workbook-table">
+              <thead><tr><th>Fuente / ubicación</th><th>Qué aporta</th><th>Propietario</th><th>Versión o fecha</th><th>Estado</th><th>Sensibilidad</th><th>Prioridad si hay conflicto</th></tr></thead>
+              <tbody>
+                <tr><td><input name="source_1_name" data-required aria-label="Fuente 1"></td><td><textarea name="source_1_scope" aria-label="Aporte fuente 1"></textarea></td><td><input name="source_1_owner" data-required aria-label="Propietario fuente 1"></td><td><input name="source_1_version" data-required aria-label="Versión fuente 1"></td><td><select name="source_1_status" aria-label="Estado fuente 1"><option>Vigente</option><option>En revisión</option><option>No usar</option></select></td><td><select name="source_1_sensitivity" aria-label="Sensibilidad fuente 1"><option>Pública</option><option>Interna</option><option>Confidencial</option><option>Restringida</option></select></td><td><input name="source_1_priority" aria-label="Prioridad fuente 1"></td></tr>
+                <tr><td><input name="source_2_name" aria-label="Fuente 2"></td><td><textarea name="source_2_scope" aria-label="Aporte fuente 2"></textarea></td><td><input name="source_2_owner" aria-label="Propietario fuente 2"></td><td><input name="source_2_version" aria-label="Versión fuente 2"></td><td><select name="source_2_status" aria-label="Estado fuente 2"><option>Vigente</option><option>En revisión</option><option>No usar</option></select></td><td><select name="source_2_sensitivity" aria-label="Sensibilidad fuente 2"><option>Pública</option><option>Interna</option><option>Confidencial</option><option>Restringida</option></select></td><td><input name="source_2_priority" aria-label="Prioridad fuente 2"></td></tr>
+                <tr><td><input name="source_3_name" aria-label="Fuente 3"></td><td><textarea name="source_3_scope" aria-label="Aporte fuente 3"></textarea></td><td><input name="source_3_owner" aria-label="Propietario fuente 3"></td><td><input name="source_3_version" aria-label="Versión fuente 3"></td><td><select name="source_3_status" aria-label="Estado fuente 3"><option>Vigente</option><option>En revisión</option><option>No usar</option></select></td><td><select name="source_3_sensitivity" aria-label="Sensibilidad fuente 3"><option>Pública</option><option>Interna</option><option>Confidencial</option><option>Restringida</option></select></td><td><input name="source_3_priority" aria-label="Prioridad fuente 3"></td></tr>
+                <tr><td><input name="source_4_name" aria-label="Fuente 4"></td><td><textarea name="source_4_scope" aria-label="Aporte fuente 4"></textarea></td><td><input name="source_4_owner" aria-label="Propietario fuente 4"></td><td><input name="source_4_version" aria-label="Versión fuente 4"></td><td><select name="source_4_status" aria-label="Estado fuente 4"><option>Vigente</option><option>En revisión</option><option>No usar</option></select></td><td><select name="source_4_sensitivity" aria-label="Sensibilidad fuente 4"><option>Pública</option><option>Interna</option><option>Confidencial</option><option>Restringida</option></select></td><td><input name="source_4_priority" aria-label="Prioridad fuente 4"></td></tr>
+                <tr><td><input name="source_5_name" aria-label="Fuente 5"></td><td><textarea name="source_5_scope" aria-label="Aporte fuente 5"></textarea></td><td><input name="source_5_owner" aria-label="Propietario fuente 5"></td><td><input name="source_5_version" aria-label="Versión fuente 5"></td><td><select name="source_5_status" aria-label="Estado fuente 5"><option>Vigente</option><option>En revisión</option><option>No usar</option></select></td><td><select name="source_5_sensitivity" aria-label="Sensibilidad fuente 5"><option>Pública</option><option>Interna</option><option>Confidencial</option><option>Restringida</option></select></td><td><input name="source_5_priority" aria-label="Prioridad fuente 5"></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="input-grid" style="margin-top: 24px">
+            <div class="control">
+              <label for="source_conflict">Regla ante conflicto de fuentes <span class="required-mark">*</span></label>
+              <p class="control-hint">Qué fuente prevalece y cuándo debe detenerse la tarea.</p>
+              <textarea id="source_conflict" name="source_conflict" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="source_missing">Regla ante información ausente</label>
+              <p class="control-hint">Preguntar, marcar incertidumbre, escalar o rechazar.</p>
+              <textarea id="source_missing" name="source_missing"></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="workbook-section context-layer print-page" aria-labelledby="ctx-proceso">
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">03</span>
+            <div><h2 id="ctx-proceso">Procesos y decisiones</h2><p>Describe la ruta normal, las decisiones, las excepciones y la evidencia necesaria. Explica por qué se decide, no solo qué pantalla se utiliza.</p></div>
+          </div>
+          <div class="input-grid">
+            <div class="control">
+              <label for="normal_route">Ruta normal paso a paso <span class="required-mark">*</span></label>
+              <textarea id="normal_route" name="normal_route" class="tall" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="exception_route">Excepciones y ruta humana <span class="required-mark">*</span></label>
+              <textarea id="exception_route" name="exception_route" class="tall" data-required></textarea>
+            </div>
+          </div>
+          <h3 class="subsection-title">Tabla de decisión</h3>
+          <div class="table-wrap">
+            <table class="workbook-table">
+              <thead><tr><th>Condición</th><th>Criterio o umbral</th><th>Acción permitida</th><th>Acción prohibida</th><th>Aprobación / evidencia</th></tr></thead>
+              <tbody>
+                <tr><td><textarea name="decision_1_condition" aria-label="Condición decisión 1"></textarea></td><td><textarea name="decision_1_rule" aria-label="Criterio decisión 1"></textarea></td><td><textarea name="decision_1_action" aria-label="Acción decisión 1"></textarea></td><td><textarea name="decision_1_forbidden" aria-label="Prohibición decisión 1"></textarea></td><td><textarea name="decision_1_evidence" aria-label="Evidencia decisión 1"></textarea></td></tr>
+                <tr><td><textarea name="decision_2_condition" aria-label="Condición decisión 2"></textarea></td><td><textarea name="decision_2_rule" aria-label="Criterio decisión 2"></textarea></td><td><textarea name="decision_2_action" aria-label="Acción decisión 2"></textarea></td><td><textarea name="decision_2_forbidden" aria-label="Prohibición decisión 2"></textarea></td><td><textarea name="decision_2_evidence" aria-label="Evidencia decisión 2"></textarea></td></tr>
+                <tr><td><textarea name="decision_3_condition" aria-label="Condición decisión 3"></textarea></td><td><textarea name="decision_3_rule" aria-label="Criterio decisión 3"></textarea></td><td><textarea name="decision_3_action" aria-label="Acción decisión 3"></textarea></td><td><textarea name="decision_3_forbidden" aria-label="Prohibición decisión 3"></textarea></td><td><textarea name="decision_3_evidence" aria-label="Evidencia decisión 3"></textarea></td></tr>
+                <tr><td><textarea name="decision_4_condition" aria-label="Condición decisión 4"></textarea></td><td><textarea name="decision_4_rule" aria-label="Criterio decisión 4"></textarea></td><td><textarea name="decision_4_action" aria-label="Acción decisión 4"></textarea></td><td><textarea name="decision_4_forbidden" aria-label="Prohibición decisión 4"></textarea></td><td><textarea name="decision_4_evidence" aria-label="Evidencia decisión 4"></textarea></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="workbook-section context-layer print-page" aria-labelledby="ctx-permisos">
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">04</span>
+            <div><h2 id="ctx-permisos">Permisos y riesgo</h2><p>No todo contexto debe estar disponible para cualquier persona o sistema. Utiliza solo los datos necesarios y define qué ocurre cuando el caso sale de política.</p></div>
+          </div>
+          <div class="input-grid">
+            <div class="control">
+              <label for="approved_tool">Herramienta, entorno y plan aprobados <span class="required-mark">*</span></label>
+              <p class="control-hint">Incluye proveedor, producto, región o tenant si aplica.</p>
+              <textarea id="approved_tool" name="approved_tool" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="authorized_users">Usuarios y roles autorizados</label>
+              <textarea id="authorized_users" name="authorized_users"></textarea>
+            </div>
+            <div class="control">
+              <label for="allowed_data">Datos permitidos <span class="required-mark">*</span></label>
+              <p class="control-hint">Clases de datos y minimización necesaria.</p>
+              <textarea id="allowed_data" name="allowed_data" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="forbidden_data">Datos prohibidos o restringidos <span class="required-mark">*</span></label>
+              <p class="control-hint">Incluye secretos, credenciales y datos de terceros.</p>
+              <textarea id="forbidden_data" name="forbidden_data" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="retention_logging">Conservación, registro y trazabilidad</label>
+              <p class="control-hint">Qué se registra, cuánto tiempo y quién puede consultarlo.</p>
+              <textarea id="retention_logging" name="retention_logging"></textarea>
+            </div>
+            <div class="control">
+              <label for="risk_escalation">Escalado e incidente <span class="required-mark">*</span></label>
+              <p class="control-hint">Cuándo se detiene, a quién se avisa y qué evidencia se conserva.</p>
+              <textarea id="risk_escalation" name="risk_escalation" data-required></textarea>
+            </div>
+            <div class="control control-wide">
+              <label for="human_review">Revisión humana y nivel de autonomía <span class="required-mark">*</span></label>
+              <p class="control-hint">Quién revisa, con qué lista, sobre qué muestra y antes de qué efecto.</p>
+              <textarea id="human_review" name="human_review" data-required></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="workbook-section context-layer print-page" aria-labelledby="ctx-especificacion">
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">05</span>
+            <div><h2 id="ctx-especificacion">Especificación y salida comprobable</h2><p>Una tarea fiable necesita entradas, instrucciones, formato y criterios de aceptación. El prompt es solo una parte de esta especificación.</p></div>
+          </div>
+          <div class="input-grid">
+            <div class="control">
+              <label for="input_contract">Contrato de entrada <span class="required-mark">*</span></label>
+              <p class="control-hint">Campos obligatorios, tipos, validaciones y qué hacer si faltan.</p>
+              <textarea id="input_contract" name="input_contract" class="tall" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="task_instructions">Instrucciones de trabajo</label>
+              <p class="control-hint">Pasos que debe seguir, uso de fuentes y cuándo pedir aclaración.</p>
+              <textarea id="task_instructions" name="task_instructions" class="tall"></textarea>
+            </div>
+            <div class="control">
+              <label for="output_format">Formato de salida <span class="required-mark">*</span></label>
+              <p class="control-hint">Estructura, campos, extensión, citas y lenguaje.</p>
+              <textarea id="output_format" name="output_format" class="tall" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="acceptance_criteria">Criterios de aceptación <span class="required-mark">*</span></label>
+              <p class="control-hint">Lista verificable que utiliza la persona validadora.</p>
+              <textarea id="acceptance_criteria" name="acceptance_criteria" class="tall" data-required></textarea>
+            </div>
+          </div>
+
+          <h3 class="subsection-title">Conjunto mínimo de pruebas</h3>
+          <div class="table-wrap">
+            <table class="workbook-table">
+              <thead><tr><th>ID / tipo</th><th>Entrada o situación</th><th>Resultado esperado</th><th>Fuente o regla</th><th>Resultado obtenido</th><th>Corrección que debe volver al sistema</th></tr></thead>
+              <tbody>
+                <tr><td><input name="test_1_id" value="T01 · normal" aria-label="Prueba 1 ID"></td><td><textarea name="test_1_input" data-required aria-label="Entrada prueba 1"></textarea></td><td><textarea name="test_1_expected" data-required aria-label="Esperado prueba 1"></textarea></td><td><textarea name="test_1_rule" aria-label="Regla prueba 1"></textarea></td><td><textarea name="test_1_result" aria-label="Resultado prueba 1"></textarea></td><td><textarea name="test_1_learning" aria-label="Aprendizaje prueba 1"></textarea></td></tr>
+                <tr><td><input name="test_2_id" value="T02 · normal" aria-label="Prueba 2 ID"></td><td><textarea name="test_2_input" aria-label="Entrada prueba 2"></textarea></td><td><textarea name="test_2_expected" aria-label="Esperado prueba 2"></textarea></td><td><textarea name="test_2_rule" aria-label="Regla prueba 2"></textarea></td><td><textarea name="test_2_result" aria-label="Resultado prueba 2"></textarea></td><td><textarea name="test_2_learning" aria-label="Aprendizaje prueba 2"></textarea></td></tr>
+                <tr><td><input name="test_3_id" value="T03 · límite" aria-label="Prueba 3 ID"></td><td><textarea name="test_3_input" aria-label="Entrada prueba 3"></textarea></td><td><textarea name="test_3_expected" aria-label="Esperado prueba 3"></textarea></td><td><textarea name="test_3_rule" aria-label="Regla prueba 3"></textarea></td><td><textarea name="test_3_result" aria-label="Resultado prueba 3"></textarea></td><td><textarea name="test_3_learning" aria-label="Aprendizaje prueba 3"></textarea></td></tr>
+                <tr><td><input name="test_4_id" value="T04 · fuente en conflicto" aria-label="Prueba 4 ID"></td><td><textarea name="test_4_input" aria-label="Entrada prueba 4"></textarea></td><td><textarea name="test_4_expected" aria-label="Esperado prueba 4"></textarea></td><td><textarea name="test_4_rule" aria-label="Regla prueba 4"></textarea></td><td><textarea name="test_4_result" aria-label="Resultado prueba 4"></textarea></td><td><textarea name="test_4_learning" aria-label="Aprendizaje prueba 4"></textarea></td></tr>
+                <tr><td><input name="test_5_id" value="T05 · fuera de política" aria-label="Prueba 5 ID"></td><td><textarea name="test_5_input" aria-label="Entrada prueba 5"></textarea></td><td><textarea name="test_5_expected" aria-label="Esperado prueba 5"></textarea></td><td><textarea name="test_5_rule" aria-label="Regla prueba 5"></textarea></td><td><textarea name="test_5_result" aria-label="Resultado prueba 5"></textarea></td><td><textarea name="test_5_learning" aria-label="Aprendizaje prueba 5"></textarea></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="workbook-section context-layer print-page" aria-labelledby="ctx-aprendizaje">
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">06</span>
+            <div><h2 id="ctx-aprendizaje">Evidencia y aprendizaje</h2><p>El feedback útil se vincula a un criterio. Cada corrección debe mejorar una fuente, una instrucción, una prueba o un control.</p></div>
+          </div>
+          <div class="input-grid">
+            <div class="control">
+              <label for="approved_examples">Ejemplos aprobados y por qué son buenos <span class="required-mark">*</span></label>
+              <textarea id="approved_examples" name="approved_examples" class="tall" data-required></textarea>
+            </div>
+            <div class="control">
+              <label for="known_failures">Errores conocidos y respuesta segura</label>
+              <textarea id="known_failures" name="known_failures" class="tall"></textarea>
+            </div>
+            <div class="control">
+              <label for="learning_metrics">Métricas y clasificación de errores</label>
+              <p class="control-hint">Calidad, adopción, coste de revisión y tipos de fallo.</p>
+              <textarea id="learning_metrics" name="learning_metrics"></textarea>
+            </div>
+            <div class="control">
+              <label for="change_history">Historial de cambios <span class="required-mark">*</span></label>
+              <p class="control-hint">Fecha, cambio, evidencia que lo motivó, responsable y versión.</p>
+              <textarea id="change_history" name="change_history" data-required></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="workbook-section gate-sheet print-page" aria-labelledby="ctx-puerta">
+          <span class="gate-day">Día 30</span>
+          <div class="workbook-section-heading">
+            <span class="workbook-section-index">07</span>
+            <div><h2 id="ctx-puerta">Puerta 2 · Método seguro</h2><p>El paquete está listo cuando la tarea puede producir una salida comprobable y comportarse de forma segura ante ausencia, conflicto y solicitudes fuera de política.</p></div>
+          </div>
+          <div class="check-grid">
+            <label class="check-item"><input type="checkbox" name="gate2_sources" data-required> Todas las fuentes utilizadas tienen propietario, versión, fecha y ámbito.</label>
+            <label class="check-item"><input type="checkbox" name="gate2_identity" data-required> Los criterios, límites, prohibiciones y aprobaciones son operativos.</label>
+            <label class="check-item"><input type="checkbox" name="gate2_process" data-required> La ruta normal, las decisiones y las excepciones están descritas.</label>
+            <label class="check-item"><input type="checkbox" name="gate2_permissions" data-required> Datos, usuarios, herramienta, conservación y escalado están autorizados.</label>
+            <label class="check-item"><input type="checkbox" name="gate2_output" data-required> Entrada, formato de salida y aceptación son verificables.</label>
+            <label class="check-item"><input type="checkbox" name="gate2_tests" data-required> Casos normales, límite, conflicto y fuera de política han sido probados.</label>
+            <label class="check-item"><input type="checkbox" name="gate2_severe" data-required> No quedan fallos graves abiertos en los casos normales.</label>
+            <label class="check-item"><input type="checkbox" name="gate2_learning" data-required> Cada error tiene una ruta para corregir fuente, instrucción, prueba o control.</label>
+          </div>
+          <div class="gate-criteria"><strong>Criterio del libro</strong><p>Para avanzar, el sistema debe superar los casos normales sin fallos graves y responder de forma segura ante información incompleta, conflicto de fuentes y solicitudes fuera de política.</p></div>
+          <div class="input-grid">
+            <div class="control">
+              <label for="gate2_decision">Decisión de la puerta <span class="required-mark">*</span></label>
+              <select id="gate2_decision" name="gate2_decision" data-required>
+                <option value="">Selecciona</option>
+                <option>Avanzar a uso real controlado</option>
+                <option>Mantener limitado y completar controles</option>
+                <option>Rediseñar contexto o método</option>
+                <option>Retirar el caso</option>
+              </select>
+            </div>
+            <div class="control">
+              <label for="gate2_decider">Quién decide y fecha</label>
+              <input id="gate2_decider" name="gate2_decider" type="text" autocomplete="off">
+            </div>
+            <div class="control control-wide">
+              <label for="gate2_evidence">Evidencia, fallos abiertos y condiciones <span class="required-mark">*</span></label>
+              <textarea id="gate2_evidence" name="gate2_evidence" class="tall" data-required></textarea>
+            </div>
+          </div>
+        </section>
+      </form>
+
+      <p class="kit-footer-note">Siguiente artefacto: <a href="kit-plan-90-dias.html">gestionar las cuatro puertas y la decisión de escala</a>. El paquete debe revisarse cuando cambien el proceso, las fuentes, los permisos, la herramienta o los criterios.</p>
+    </div>
+  </main>
+</body>
+</html>
