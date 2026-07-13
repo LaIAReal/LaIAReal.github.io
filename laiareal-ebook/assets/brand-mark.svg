@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-labelledby="title desc">
+  <title id="title">Símbolo de La IA Real</title>
+  <desc id="desc">Cinco líneas que convierten un punto de partida en un resultado.</desc>
+  <rect width="72" height="72" rx="14" fill="#202726"/>
+  <path d="M17 20h22M17 28h30M17 36h22M17 44h30M17 52h22" fill="none" stroke="#F4EFE5" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="53" cy="20" r="4" fill="#C38A37"/>
+  <path d="M43 20h6" stroke="#C38A37" stroke-width="3" stroke-linecap="round"/>
+</svg>
